@@ -460,15 +460,7 @@ sleep 2
 # the production files
 #########################################################################################
 # Replace the settings.py with the production version
-if [ -f "$HD/saleor/saleor/settings.py" ]; then
-        sudo rm $HD/saleor/saleor/settings.py
-fi
-sudo cp $HD/Deploy_Saleor/resources/saleor/$VERSION-settings.py $HD/saleor/saleor/settings.py
-# Replace the populatedb.py file with the production version
-if [ -f "$HD/saleor/saleor/core/management/commands/populatedb.py" ]; then
-        sudo rm $HD/saleor/saleor/core/management/commands/populatedb.py
-fi
-sudo cp $HD/Deploy_Saleor/resources/saleor/$VERSION-populatedb.py $HD/saleor/saleor/core/management/commands/populatedb.py
+
 # Replace the test_core.py file with the production version
 #if [ -f "$HD/saleor/saleor/core/tests/test_core.py" ]; then
 #        sudo rm $HD/saleor/saleor/core/tests/test_core.py
